@@ -12,10 +12,8 @@ let () =
     for i = 1 to ct do
       let inp = Sys.argv.(i) in
       let process lexbuf =
-        let buf = Buffer.create 256 in
         Parser.program Lexer.tokenize lexbuf |>
-          Format.(fprintf (formatter_of_buffer buf)) "%a@." Listing.pp;
-        Buffer.contents buf
+        Format.(asprintf "%a@." Listing.pp)
       in
       try
         let s = open_in inp |> Lexing.from_channel |> process in
