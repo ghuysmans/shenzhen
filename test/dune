@@ -1,0 +1,7 @@
+(rule
+ (alias runtest)
+ (deps p13.s)
+ (action (run ./fixpoint.exe %{deps})))
+(executable
+ (name fixpoint)
+ (libraries shenzhen))
