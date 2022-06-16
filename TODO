@@ -1,0 +1,16 @@
+if (x0 > 0) x1 = x0; else x1 = 0;
+
+loop:
+tgt x0 0
++mov x0 x1 #oops: next value of x0!
+-mov 0 x1
+jmp loop
+
+loop:
+mov x0 acc #read it once
+tgt acc 0
++mov acc x1
+-mov 0 x1
+jmp loop
+
+represent mov x0 ... as read x0 ?
