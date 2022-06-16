@@ -7,7 +7,7 @@
 %token PLUS MINUS
 %token NL
 %token EOF
-%type <Listing.line list> program
+%type <Listing.t> program
 %start program
 %%
 
