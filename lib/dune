@@ -1,4 +1,4 @@
 (ocamllex (modules lexer))
 (menhir (modules parser))
 (library
- (name shenzhen))
+ (public_name shenzhen))
